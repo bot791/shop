@@ -5,7 +5,11 @@ module.exports = {
 
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily:{
+        "Swash":["'Berkshire Swash'", "cursive"],
+      }
+    },
   },
   plugins: [],
 }
