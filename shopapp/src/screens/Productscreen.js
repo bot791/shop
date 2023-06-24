@@ -7,8 +7,8 @@ const Productscreen = () => {
     const product=products.find((p)=>p._id === (id)
     )
   return (
-   <div className=' w-full h-screen bg-zinc-400 flex flex-row'>
-<div className=' w-1/2 p-1 rounded mt-5 ml-5 flex flex-col'>
+   <div className=' w-full h-screen items-center flex sm:flex-row flex-col'>
+<div className='w-2/3 sm:w-1/2 p-1 rounded mt-5 sm:ml-5 flex flex-col'>
   <img src={product.image} alt='' className='rounded border border-zinc-600'/>
   <button className=' text-zinc-100 ring-2 bg-emerald-900 hover:bg-emerald-500 ring-white text-center m-2 px-4 py-1 rounded font-bold'>BUY NOW</button>
   <button className=' text-zinc-100 ring-2 bg-emerald-900 hover:bg-emerald-500 ring-white text-center m-2 px-4 py-1 rounded font-bold'>ADD TO CART</button>
