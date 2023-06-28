@@ -13,9 +13,9 @@ res.json(products)
 
 app.get('/api/products/:id',(req,res)=>{
     const {id}=useParams();
-const product = products.find((p)=>{
+const product = products.find(p=>
 p._id === id
-})
+)
 res.json(product)
 }
 )
