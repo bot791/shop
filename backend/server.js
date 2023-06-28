@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
 const products = require('./data/products');
-const { useParams } = require('react-router-dom');
 
 
 app.get('/',(req,res)=>{

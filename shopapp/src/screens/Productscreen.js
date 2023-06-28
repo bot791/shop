@@ -1,11 +1,18 @@
 import React from 'react'
-import products from '../products'
 import { useParams } from 'react-router-dom'
+import { useState,useEffect } from 'react'
+import axios from 'axios'
 
 const Productscreen = () => {
+  const [product,setProduct] = useState({})
     const {id}=useParams();
-    const product=products.find((p)=>p._id === (id)
-    )
+    useEffect(()=>{
+      const fetchProduct = async ()=>{
+        const {data} =await axios.get(`/api/products/${id}`)
+        setProduct(data)
+      }
+      fetchProduct()
+        },[id])
   return (
    <div className=' w-full h-screen items-center flex sm:flex-row flex-col'>
 <div className='w-2/3 sm:w-1/2 p-1 rounded mt-5 sm:ml-5 flex flex-col'>
