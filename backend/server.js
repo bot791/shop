@@ -1,25 +1,15 @@
-const express = require('express');
-const app = express();
-const products = require('./data/products');
-
-
+const express = require('express')
+const app = express;
+const products = require('./data/products')
 
 app.get('/',(req,res)=>{
-res.send('api is running')
+res.send('api started')
 })
 app.get('/api/products',(req,res)=>{
-res.json(products)
+    res.json(products)
 })
 
-app.get('/api/products/:id',(req,res)=>{
-    const id = req.params.id
-    const product = products.find((p)=>{
-p._id === id
-    })
-    res.json(product)
-})
-    
 
 
-app.listen(5000,console.log("server running on port 5000"))
 
+app.listen(5000,console.log("server started"))
