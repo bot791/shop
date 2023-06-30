@@ -1,16 +1,17 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
 import { useState,useEffect } from 'react'
 import axios from 'axios'
+import {useParams} from 'react-router-dom'
 
-const Productscreen = () => {
-  const [product,setProduct] = useState({})
-    const {id}=useParams();
+const Productscreen = ({match}) => {
+  const [product,setProduct] = useState([])
+  const id = useParams()       
+
     useEffect(()=>{
+
       const fetchProduct = async ()=>{
-        const {data} =await axios.get(`/api/products/${id}`)
+ const {data} =await axios.get(`/api/products/${id}`)
         setProduct(data)
-        console.log(data)
       }
       fetchProduct()
         },[id])
