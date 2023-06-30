@@ -1,24 +1,24 @@
-const express = require('express');
+const express = require("express");
 const app = express();
-const products = require('./data/products');
-const useParams = require('react-router-dom')
+const products = require("./data/products");
+const cors = require("cors");
 
-const {id} = useParams();
+app.use(cors());
 
+app.get("/", (req, res) => {
+  res.send("api is running");
+});
+app.get("/api/products", (req, res) => {
+  res.json(products);
+});
+app.get("/api/products/:id", (req, res) => {
+  const { id } = req.params; // Get the id parameter from the request URL
+  const product = products.find((p) => p._id === id); // Find the product with the matching id
+  if (product) {
+    res.json(product); // Send the product details as a JSON response
+  } else {
+    res.status(404).json({ message: "Product not found" }); // If product is not found, send a 404 status code and an error message
+  }
+});
 
-app.get('/',(req,res)=>{
-res.send('api is running')
-})
-app.get('/api/products',(req,res)=>{
-res.json(products)
-})
-app.get('/api/products/:id',(req,res)=>{
- const product = products.find((p)=>{
-p._id === req.id
- })
-    res.json(product)
-    })
-
-
-app.listen(5000,console.log("server running on port 5000"))
-
+app.listen(5000, console.log("server running on port 5000"));
