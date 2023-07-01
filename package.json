@@ -10,8 +10,15 @@
   "main": "server.js",
   "scripts": {
     "start": "node backend/server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server":"nodemon backend/server",
+    "client":"npm start --prefix shopapp",
+    "dev":"concurrently \"npm run server\" \"npm run client\""
   },
   "author": "RoyalBrothers",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "nodemon": "^2.0.22"
+  }
 }
