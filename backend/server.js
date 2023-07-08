@@ -1,14 +1,14 @@
-import express from "express"
-import products from "./data/products.js"
-import dotenv from 'dotenv'
+import express from "express";
+import products from "./data/products.js";
+import dotenv from "dotenv";
 
-dotenv.config()
+dotenv.config();
 
 const app = express();
 
 //setting up route
 app.get("/", (req, res) => {
-  res.send("api started...");  
+  res.send("api started...");
 });
 
 //setting up route
@@ -26,6 +26,9 @@ app.get("/api/products/:id", (req, res) => {
   }
 });
 
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, console.log(`server started in ${process.env.NODE_ENV} mode on port ${PORT}`));
+app.listen(
+  PORT,
+  console.log(`server started in ${process.env.NODE_ENV} mode on port ${PORT}`)
+);
