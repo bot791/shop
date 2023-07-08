@@ -6,10 +6,12 @@ dotenv.config()
 
 const app = express();
 
-
+//setting up route
 app.get("/", (req, res) => {
-  res.send("api started...");
+  res.send("api started...");  
 });
+
+//setting up route
 app.get("/api/products", (req, res) => {
   res.json(products);
 });
