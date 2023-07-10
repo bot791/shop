@@ -18,10 +18,10 @@ const Header = () => {
         RoyalJute
       </h1>
       <div className="ml-auto space-x-4 flex items-center mr-2">
-        <button className=" text-center ring-2 ring-white bg-blue-900 rounded-full px-4  py-1  hover:bg-blue-200 hover:text-gray-800 hover:ring-blue-500 font-bold">
+        <button className=" text-center ring-2 ring-white bg-blue-900 rounded-full px-4  py-1  hover:bg-blue-200 hover:text-gray-800 hover:ring-blue-500 font-mono font-bold">
           Login
         </button>
-        <button className=" text-center ring-2 ring-white bg-blue-900 rounded-full px-4  py-1  hover:bg-blue-200 hover:text-gray-800 hover:ring-blue-500 font-bold">
+        <button className=" text-center ring-2 ring-white bg-blue-900 rounded-full px-4  py-1  hover:bg-blue-200 hover:text-gray-800 hover:ring-blue-500 font-mono font-bold">
           Cart
         </button>
       </div>
