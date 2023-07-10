@@ -9,7 +9,7 @@ const Header = () => {
   };
 
   return (
-    <header className=" w-full bg-emerald-700 text-zinc-100 flex flex-row h-[50px]">
+    <header className=" w-full bg-indigo-950 text-zinc-100 flex flex-row h-[50px]">
       <h1
         className="flex items-center ml-2 font-Swash font-bold text-lg tracking-widest"
         onClick={handleRedirect}
@@ -18,10 +18,10 @@ const Header = () => {
         RoyalJute
       </h1>
       <div className="ml-auto space-x-4 flex items-center mr-2">
-        <button className=" text-center ring-2 ring-white bg-emerald-800 rounded-full px-4  py-1  hover:bg-emerald-400 hover:text-gray-800 font-bold">
+        <button className=" text-center ring-2 ring-white bg-blue-900 rounded-full px-4  py-1  hover:bg-blue-200 hover:text-gray-800 hover:ring-blue-500 font-bold">
           Login
         </button>
-        <button className=" text-center ring-2 ring-white bg-emerald-800 rounded-full px-4  py-1  hover:bg-emerald-400 hover:text-gray-800 font-bold">
+        <button className=" text-center ring-2 ring-white bg-blue-900 rounded-full px-4  py-1  hover:bg-blue-200 hover:text-gray-800 hover:ring-blue-500 font-bold">
           Cart
         </button>
       </div>
