@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <header className=" w-full bg-indigo-950 text-zinc-100 flex flex-row h-[50px]">
       <h1
-        className="flex items-center ml-2 font-Swash font-bold text-lg tracking-widest"
+        className="flex items-center ml-2 font-Sacramento font-bold text-xl tracking-widest"
         onClick={handleRedirect}
         style={{ cursor: "pointer" }}
       >

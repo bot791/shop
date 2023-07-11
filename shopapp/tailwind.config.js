@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       fontFamily:{
         "Swash":["'Berkshire Swash'", "cursive"],
+        "Sacramento":["'Sacramento'", "cursive"],
       }
     },
   },
