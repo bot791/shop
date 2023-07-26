@@ -25,6 +25,6 @@ const orderSchema = mongoose.Schema({
     
 })
 
-const User = mpngoose.model('User',userSchema)
+const User = mpngoose.model('Order',userSchema)
 
-export default User
+export default Order
