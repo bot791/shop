@@ -30,11 +30,24 @@ ref:'User'
         type:Number,
         required:true,
         default:0
+    },
+    numReviews:{
+        type:Number,
+        required:true,
+        default:0
+    },
+    price:{
+        type:Number,
+        required:true
+    },
+    countInStock:{
+        type:Number,
+        required:true
     }
 }, {
     timestamps:true
 })
 
-const Product = mpngoose.model('Product',userSchema)
+const Product = mongoose.model('Product',userSchema)
 
 export default Product
