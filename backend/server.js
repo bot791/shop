@@ -2,6 +2,7 @@ import express from "express";
 import products from "./data/products.js";
 import dotenv from "dotenv";
 import connectDB from "./config/db.js";
+import productRoutes from './routes/productRoutes.js'
 
 dotenv.config();
 
@@ -13,6 +14,8 @@ const app = express();
 app.get("/", (req, res) => {
   res.send("api started...");
 });
+
+app.use('/api/products',productRoutes)
 
 //setting up route
 app.get("/api/products", (req, res) => {
