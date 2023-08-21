@@ -17,7 +17,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon backend/server",
     "client": "npm start --prefix shopapp",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node backend/seeder",
+    "data:destroy": "node backend/seeder -d"
+
   },
   "author": "RoyalBrothers",
   "license": "MIT",
