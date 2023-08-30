@@ -15,7 +15,7 @@ router.get(
   "/:id",
   asyncHandler(async (req, res) => {
     const { id } = req.params; // Get the id parameter from the request URL
-    const product = await Product.findById((p) => p._id === id); // Find the product with the matching id
+    const product = await Product.findById(id); // Find the product with the matching id
     if (product) {
       res.json(product); // Send the product details as a JSON response
     } else {
