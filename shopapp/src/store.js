@@ -1,4 +1,4 @@
-import { configureStore, combineReducers, applyMiddleware } from "redux";
+import { legacy_createStore, combineReducers, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 
 const reducer = combineReducers({});
@@ -6,8 +6,8 @@ const reducer = combineReducers({});
 const initialState = {};
 
 const middleware = [thunk];
-
-const store = configureStore(
+//createStore is replaced by legacy_createStore
+const store = legacy_createStore(
   reducer,
   initialState,
   applyMiddleware(...middleware)
