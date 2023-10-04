@@ -25,6 +25,14 @@ const Header = () => {
           Cart
         </button>
       </div>
+      <div className=" visible sm:invisible flex flex-row space-x-2">
+        <button className=" hover:-translate-y-0.5 transform transition focus:outline-none  text-white px-2 py-2  uppercase tracking-wider font-semibold text-sm">
+          <img className=" h-10" src="./images/login.svg" alt="login" />
+        </button>
+        <button className=" hover:-translate-y-0.5 transform transition focus:outline-none  text-white px-2 py-2  uppercase tracking-wider font-semibold text-sm">
+          <img className=" h-10" src="./images/cart.svg" alt="cart" />
+        </button>
+      </div>
     </div>
   );
 };
