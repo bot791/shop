@@ -15,7 +15,7 @@ const Homescreen = () => {
   }, []);
   console.log(products);
   return (
-    <div className=" mt-2 grid grid-col-1 sm:grid-cols-3 lg:grid-cols-5 gap-4 justify-items-center mx-2 mb-2 ">
+    <div className=" px-2 py-4 grid grid-col-1 sm:grid-cols-3 lg:grid-cols-5 gap-4 justify-items-center">
       {products.map((product) => {
         return (
           <div key={product._id} className="">
