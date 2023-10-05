@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <div className="text-yellow-100 flex flex-row h-20">
       <h1
-        className="px-2 py-4 font-Phily text-orange-500 font-extrabold text-5xl tracking-wider"
+        className="px-4 py-4 font-Phily text-purple-700 font-extrabold text-5xl tracking-wider"
         onClick={handleRedirect}
         style={{ cursor: "pointer" }}
       >

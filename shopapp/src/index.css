@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 body{
-    background-color: rgb(248, 248, 236);
+    background-image: linear-gradient(to right, rgb(237, 197, 197),rgb(238, 226, 204),rgb(243, 243, 202),rgb(202, 237, 202),rgb(204, 204, 245),rgb(230, 208, 246),rgb(232, 198, 232));
     display: flex;
     align-items: center;
-    padding:10px;
+    
 }

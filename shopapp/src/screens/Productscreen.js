@@ -16,29 +16,33 @@ function Productscreen() {
     fetchProduct();
   }, [id]);
   return (
-    <div className=" w-full h-screen items-center flex sm:flex-row flex-col">
-      <div className="w-2/3 sm:w-1/2 p-1 rounded mt-5 sm:ml-5 flex flex-col">
+    <div className="flex sm:flex-row flex-col justify-evenly w-screen mx-auto space-y-2">
+      <div className="">
         <img
+          className="h-96 mx-auto rounded-xl"
           src={product.image}
-          alt=""
-          className="rounded border border-zinc-600"
+          alt="product"
         />
-        <button className=" text-zinc-100 ring-2 bg-emerald-900 hover:bg-emerald-500 ring-white text-center m-2 px-4 py-1 rounded font-bold">
-          BUY NOW
-        </button>
-        <button className=" text-zinc-100 ring-2 bg-emerald-900 hover:bg-emerald-500 ring-white text-center m-2 px-4 py-1 rounded font-bold">
-          ADD TO CART
-        </button>
       </div>
-      <div className=" flex flex-col">
-        <p className=" font-bold font-mono m-10 text-2xl text-gray-800">
-          {product.name}
+      <div className=" bg-white p-10 flex flex-col space-y-2 rounded-xl ">
+        <p className=" text-indigo-900 text-lg font-extrabold tracking-wider">
+          Name: {product.name}
         </p>
-        <p className=" font-bold text-lg px-5">Brand: {product.brand}</p>
-        <p className=" font-semibold m-5">{product.description}</p>
-        <p className=" px-5 font-medium font-serif text-lg text-zinc-700">
-          In stock: {product.countInStock}
+        <p className=" text-indigo-900 text-lg font-extrabold tracking-wider">
+          Price: {product.price}
         </p>
+        <p className=" text-indigo-900 text-lg font-extrabold tracking-wider">
+          Brand: {product.brand}
+        </p>
+        <p className=" text-indigo-900 text-lg font-extrabold tracking-wider">
+          Description: {product.description}
+        </p>
+        <button className="hover:bg-orange-400 hover:-translate-y-0.5 transform transition focus:outline-none bg-orange-500 text-white px-2 py-2 shadow-lg uppercase tracking-wider font-semibold text-sm">
+          Login
+        </button>
+        <button className="hover:bg-orange-400 hover:-translate-y-0.5 transform transition focus:outline-none bg-orange-500 text-white px-2 py-2 shadow-lg uppercase tracking-wider font-semibold text-sm">
+          Cart
+        </button>
       </div>
     </div>
   );

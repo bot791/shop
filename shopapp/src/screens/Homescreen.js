@@ -18,7 +18,7 @@ const Homescreen = () => {
   return (
     <div>
       <LandingPage />
-      <div className="grid grid-col-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 justify-center">
+      <div className="px-2 grid grid-col-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 justify-center bg-gradient-to-tr from-yellow-300 to-blue-400 py-4">
         {products.map((product) => {
           return (
             <div key={product._id} className="">
