@@ -9,6 +9,8 @@ module.exports = {
         Oxanium: ["'Oxanium'", "cursive"],
         Aldrich: ["'Aldrich'", "sans-serif"],
         Phily: ["'Philosopher'", "sans-serif"],
+        Gabarito: ["'Gabarito'", "cursive"],
+        Ibm: ["'IBM Plex Serif'", "serif"],
       },
     },
   },

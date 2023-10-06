@@ -21,22 +21,22 @@ function Productscreen() {
         <img className="h-96 mx-auto" src={product.image} alt="product" />
       </div>
       <div className="  p-10 flex flex-col space-y-2 rounded-xl ">
-        <p className=" text-indigo-900 text-lg font-extrabold tracking-wider">
+        <p className=" text-indigo-900 text-lg font-bold font-Ibm tracking-wider">
           Name: {product.name}
         </p>
-        <p className=" text-indigo-900 text-lg font-extrabold tracking-wider">
+        <p className=" text-lime-500 text-2xl font-extrabold tracking-wider">
           Price: {product.price}
         </p>
-        <p className=" text-indigo-900 text-lg font-extrabold tracking-wider">
+        <p className=" text-indigo-900 text-lg font-bold tracking-wider">
           Brand: {product.brand}
         </p>
-        <p className=" text-indigo-900 text-lg font-extrabold tracking-wider">
+        <p className=" text-indigo-900 text-lg font-mono tracking-wider">
           Description: {product.description}
         </p>
-        <button className="hover:bg-orange-400 hover:-translate-y-0.5 transform transition focus:outline-none bg-orange-500 text-white px-2 py-2 shadow-lg uppercase tracking-wider font-semibold text-sm">
+        <button className=" hover:-translate-y-0.5 transform transition focus:outline-none bg-neutral-400 hover:bg-neutral-300 text-white hover:text-purple-900 px-2 py-2 shadow-lg uppercase tracking-wider font-semibold text-sm">
           buy now
         </button>
-        <button className="hover:bg-orange-400 hover:-translate-y-0.5 transform transition focus:outline-none bg-orange-500 text-white px-2 py-2 shadow-lg uppercase tracking-wider font-semibold text-sm">
+        <button className=" hover:-translate-y-0.5 transform transition focus:outline-none bg-neutral-400 hover:bg-neutral-300 text-white hover:text-purple-900 px-2 py-2 shadow-lg uppercase tracking-wider font-semibold text-sm">
           add to cart
         </button>
       </div>

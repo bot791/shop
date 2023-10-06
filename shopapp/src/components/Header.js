@@ -9,28 +9,33 @@ const Header = () => {
   };
 
   return (
-    <div className="text-yellow-100 flex flex-row h-20">
+    <div className="text-yellow-100 flex flex-row h-20 bg-neutral-200">
       <h1
-        className="px-4 py-4 font-Phily text-purple-700 font-extrabold text-4xl sm:text-5xl tracking-wider"
+        className=" flex flex-row px-4 py-4 text-purple-900 font-extrabold text-2xl sm:text-3xl md:5xl tracking-wide"
         onClick={handleRedirect}
         style={{ cursor: "pointer" }}
       >
-        RoyalJute
+        RoyalBrothers
+        <img
+          className=" h-5 mt-2 sm:mt-3  ml-2"
+          src="./images/shop.svg"
+          alt="shop"
+        />
       </h1>
-      <div className=" invisible sm:visible ml-auto space-x-4 flex items-center mr-2">
-        <button className="hover:bg-orange-400 hover:-translate-y-0.5 transform transition focus:outline-none bg-orange-500 text-white px-2 py-2 shadow-lg uppercase tracking-wider font-semibold text-sm">
+      <div className="invisible sm:visible ml-auto sm:space-x-4 py-4 absolute right-5">
+        <button className=" hover:-translate-y-0.5 transform transition focus:outline-none bg-neutral-400 hover:bg-neutral-300 text-white hover:text-purple-900 px-2 py-2 shadow-lg uppercase tracking-wider font-semibold text-sm">
           Login
         </button>
-        <button className="hover:bg-orange-400 hover:-translate-y-0.5 transform transition focus:outline-none bg-orange-500 text-white px-2 py-2 shadow-lg uppercase tracking-wider font-semibold text-sm">
+        <button className=" hover:-translate-y-0.5 transform transition focus:outline-none bg-neutral-400 hover:bg-neutral-300  text-white hover:text-purple-900 px-2 py-2 shadow-lg uppercase tracking-wider font-semibold text-sm">
           Cart
         </button>
       </div>
-      <div className=" visible sm:invisible flex flex-row space-x-2">
-        <button className=" hover:-translate-y-0.5 transform transition focus:outline-none  text-white px-2 py-2  uppercase tracking-wider font-semibold text-sm">
-          <img className=" h-14" src="./images/login.svg" alt="login" />
+      <div className=" visible sm:invisible flex flex-row absolute right-1 top-2 space-x-2 px-2 ">
+        <button className=" hover:-translate-y-0.5 transform transition focus:outline-none  px-1 py-2">
+          <img className=" h-10" src="./images/login.svg" alt="login" />
         </button>
-        <button className=" hover:-translate-y-0.5 transform transition focus:outline-none  text-white px-2 py-2  uppercase tracking-wider font-semibold text-sm">
-          <img className=" h-14" src="./images/cart.svg" alt="cart" />
+        <button className=" hover:-translate-y-0.5 transform transition focus:outline-none px-1 py-2">
+          <img className=" h-10" src="./images/cart.svg" alt="cart" />
         </button>
       </div>
     </div>
