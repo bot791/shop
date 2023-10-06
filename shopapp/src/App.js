@@ -6,7 +6,7 @@ import Productscreen from "./screens/Productscreen";
 
 function App() {
   return (
-    <div className="">
+    <div className=" relative">
       <Router>
         <Header />
         <Routes>

@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <div className="text-yellow-100 flex flex-row h-20">
       <h1
-        className="px-4 py-4 font-Phily text-purple-700 font-extrabold text-5xl tracking-wider"
+        className="px-4 py-4 font-Phily text-purple-700 font-extrabold text-4xl sm:text-5xl tracking-wider"
         onClick={handleRedirect}
         style={{ cursor: "pointer" }}
       >
@@ -27,10 +27,10 @@ const Header = () => {
       </div>
       <div className=" visible sm:invisible flex flex-row space-x-2">
         <button className=" hover:-translate-y-0.5 transform transition focus:outline-none  text-white px-2 py-2  uppercase tracking-wider font-semibold text-sm">
-          <img className=" h-10" src="./images/login.svg" alt="login" />
+          <img className=" h-14" src="./images/login.svg" alt="login" />
         </button>
         <button className=" hover:-translate-y-0.5 transform transition focus:outline-none  text-white px-2 py-2  uppercase tracking-wider font-semibold text-sm">
-          <img className=" h-10" src="./images/cart.svg" alt="cart" />
+          <img className=" h-14" src="./images/cart.svg" alt="cart" />
         </button>
       </div>
     </div>
