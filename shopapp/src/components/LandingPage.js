@@ -7,7 +7,7 @@ const LandingPage = () => {
         <div className=" flex flex-col sm:flex-row justify-evenly px-2 py-4">
           <div className="">
             <img
-              className=" h-auto mx-auto"
+              className="h-full mx-auto"
               src="./images/landingpage.svg"
               alt="products"
             />
