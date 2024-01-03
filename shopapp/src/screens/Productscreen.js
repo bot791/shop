@@ -33,7 +33,7 @@ function Productscreen() {
         <p className=" text-indigo-900 text-lg font-mono tracking-wider">
           Description: {product.description}
         </p>
-        <button className=" hover:-translate-y-0.5 transform transition focus:outline-none bg-neutral-400 hover:bg-neutral-300 text-white hover:text-purple-900 px-2 py-2 shadow-lg uppercase tracking-wider font-semibold text-sm">
+        <button className=" hover:-translate-y-0.5 transform transition focus:outline-none bg-indigo-600 hover:bg-indigo-500 text-white hover:text-yellow-200 px-2 py-2 shadow-lg uppercase tracking-wider font-semibold text-sm">
           buy now
         </button>
         <button className=" hover:-translate-y-0.5 transform transition focus:outline-none bg-neutral-400 hover:bg-neutral-300 text-white hover:text-purple-900 px-2 py-2 shadow-lg uppercase tracking-wider font-semibold text-sm">
