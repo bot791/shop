@@ -1,12 +1,12 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 function Productscreen() {
   const [product, setProduct] = useState([]);
   const { id } = useParams();
-
+  const navigate = useNavigate();
   useEffect(() => {
     const fetchProduct = async () => {
       const { data } = await axios.get(`/api/products/${id}`);
@@ -15,6 +15,10 @@ function Productscreen() {
     };
     fetchProduct();
   }, [id]);
+
+  const addToCartHandler = () => {
+    navigate(`/cart/${id}`);
+  };
   return (
     <div className="flex sm:flex-row flex-col justify-evenly w-screen mx-auto space-y-2 bg-white">
       <div className="">
@@ -36,7 +40,10 @@ function Productscreen() {
         <button className="rounded-md hover:-translate-y-0.5 transform transition focus:outline-none bg-indigo-600 hover:bg-indigo-500 text-white hover:text-yellow-200 px-2 py-2 shadow-lg uppercase tracking-wider font-semibold text-sm">
           buy now
         </button>
-        <button className="rounded-md hover:-translate-y-0.5 transform transition focus:outline-none bg-indigo-700 hover:bg-indigo-500 text-white hover:text-yellow-200 px-2 py-2 shadow-lg uppercase tracking-wider font-semibold text-sm">
+        <button
+          onClick={addToCartHandler}
+          className="rounded-md hover:-translate-y-0.5 transform transition focus:outline-none bg-indigo-700 hover:bg-indigo-500 text-white hover:text-yellow-200 px-2 py-2 shadow-lg uppercase tracking-wider font-semibold text-sm"
+        >
           add to cart
         </button>
       </div>
