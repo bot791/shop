@@ -10,7 +10,7 @@
 - JWT for authentication
 - Tailwind CSS
 
-**This app is made for the organization named** ***ROYAL BROTHERS***  
+**This app is made for the organization named** ***Meds.etc***  
 
 
 

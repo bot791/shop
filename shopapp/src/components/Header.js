@@ -78,7 +78,7 @@ const Header = () => {
         onClick={handleRedirect}
         style={{ cursor: "pointer" }}
       >
-        RoyalBrothers
+        Meds.etc
         <img
           className=" h-5 mt-2 sm:mt-3  ml-2"
           src="./images/shop.svg"
