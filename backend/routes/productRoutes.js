@@ -3,9 +3,11 @@ const router = express.Router();
 import {
   getProducts,
   getProductsById,
+  createProduct,
+  updateProduct,
 } from "../controllers/productController.js";
 
-router.route("/").get(getProducts);
-router.route("/:id").get(getProductsById);
+router.route("/").get(getProducts).post(createProduct);
+router.route("/:id").get(getProductsById).put(updateProduct);
 
 export default router;
