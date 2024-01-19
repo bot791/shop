@@ -13,6 +13,7 @@ const Header = () => {
     category: "Medicine",
     description: "",
     price: 0,
+    location: "",
   });
 
 
@@ -121,6 +122,7 @@ const Header = () => {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
+            zIndex: 10,
           }}
         >
           <div
@@ -181,6 +183,17 @@ const Header = () => {
                   type="number"
                   name="price"
                   value={formData.price}
+                  onChange={handleInputChange}
+                  style={{ marginLeft: "10px" }}
+                />
+              </label>
+              <br />
+              <label style={{color:"blue"}}>
+                Location:
+                <input
+                  type="text"
+                  name="location"
+                  value={formData.location}
                   onChange={handleInputChange}
                   style={{ marginLeft: "10px" }}
                 />

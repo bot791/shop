@@ -37,6 +37,11 @@ function Productscreen() {
         <p className=" text-indigo-900 text-lg font-mono tracking-wider">
           Description: {product.description}
         </p>
+        {product?.location && (
+          <p className="text-indigo-900 text-lg font-mono tracking-wider">
+            Location: {product.location}
+          </p>
+        )}
         <button className="rounded-md hover:-translate-y-0.5 transform transition focus:outline-none bg-indigo-600 hover:bg-indigo-500 text-white hover:text-yellow-200 px-2 py-2 shadow-lg uppercase tracking-wider font-semibold text-sm">
           buy now
         </button>
