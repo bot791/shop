@@ -9,7 +9,7 @@ function Productscreen() {
   const navigate = useNavigate();
   useEffect(() => {
     const fetchProduct = async () => {
-      const { data } = await axios.get(`/api/products/${id}`);
+      const { data } = await axios.get(`https://shop-api-6ak8.onrender.com/api/products/${id}`);
       setProduct(data);
       console.log(data);
     };
