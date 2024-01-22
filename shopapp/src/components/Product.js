@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Product = ({ product }) => {
   return (
-    <div className=" h-max p-4 bg-white hover:bg-neutral-100 shadow-sm hover:-translate-y-1 transform transition ">
+    <div className=" h-max p-4 bg-transparent hover:bg-white hover:shadow-sm hover:-translate-y-1 transform transition ">
       <Link to={`/product/${product._id}`}>
         <img className="" src={product.image} alt="" />
         <h1 className=" font-bold text-xl p-2 text-center font-Ibm text-indigo-900 ">

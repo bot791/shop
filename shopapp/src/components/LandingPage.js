@@ -19,7 +19,7 @@ const LandingPage = () => {
           </div>
         </div>
         <div className=" p-10 ">
-          <p className=" text-center font-extrabold font-Gabarito text-5xl sm:text-7xl uppercase text-teal-700">
+          <p className=" text-center font-extrabold font-Gabarito text-5xl sm:text-7xl uppercase text-zinc-500">
             Our Products
           </p>
         </div>
