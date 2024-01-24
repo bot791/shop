@@ -1,7 +1,12 @@
 import express from "express";
 const router = express.Router();
-import { authUser } from "../controllers/userController.js";
+import { authUser, getProtectedData } from "../controllers/userController.js";
+import { protect } from "../middleware/authMiddleware.js";
 
+// Public route
 router.post("/login", authUser);
 
-export default router;
+// Protected route
+router.get("/protected", protect, getProtectedData);
+
+export default router

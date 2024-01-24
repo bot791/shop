@@ -4,7 +4,7 @@ const productSchema = mongoose.Schema(
   {
     user: {
       type: mongoose.Schema.Types.ObjectId,
-      required: true,
+      required: false,
       ref: "User",
     },
     name: {
@@ -13,7 +13,8 @@ const productSchema = mongoose.Schema(
     },
     image: {
       type: String,
-      required: true,
+      required: false,
+      default: "/images/sampleImage.png",
     },
     brand: {
       type: String,
@@ -29,12 +30,12 @@ const productSchema = mongoose.Schema(
     },
     rating: {
       type: Number,
-      required: true,
+      required: false,
       default: 0,
     },
     numReviews: {
       type: Number,
-      required: true,
+      required: false,
       default: 0,
     },
     price: {
@@ -43,7 +44,11 @@ const productSchema = mongoose.Schema(
     },
     countInStock: {
       type: Number,
-      required: true,
+      required: false,
+    },
+    location: {
+      type: String,
+      required: false,
     },
   },
   {

@@ -4,11 +4,13 @@ import connectDB from "./config/db.js";
 import productRoutes from "./routes/productRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
 import products from "./data/products.js";
+import cors from "cors";
 dotenv.config();
 
 connectDB();
 
 const app = express();
+app.use(cors());
 
 app.use(express.json());
 
@@ -20,21 +22,8 @@ app.get("/", (req, res) => {
 app.use("/api/products", productRoutes);
 app.use("/api/user", userRoutes);
 
+
 //setting up route
-
-app.get("/api/products", (req, res) => {
-  res.json(products);
-});
-
-app.get("/api/products/:id", (req, res) => {
-  const { id } = req.params; // Get the id parameter from the request URL
-  const product = products.find((p) => p._id === id); // Find the product with the matching id
-  if (product) {
-    res.json(product); // Send the product details as a JSON response
-  } else {
-    res.status(404).json({ message: "Product not found" }); // If product is not found, send a 404 status code and an error message
-  }
-});
 
 const PORT = process.env.PORT || 5000;
 
