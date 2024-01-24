@@ -16,4 +16,12 @@ const authUser = asyncHandler(async (req, res) => {
   }
 });
 
-export { authUser };
+const getProtectedData = asyncHandler(async (req, res) => {
+  // You can access the authenticated user from req.user
+  res.json({
+    email: req.user.email,
+    // Add other user-related data as needed
+  });
+});
+
+export { authUser, getProtectedData };
