@@ -47,8 +47,17 @@ const Header = () => {
     e.preventDefault();
   
     try {
+      const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YWE4MTNkM2NkZGY1NmNkMDFiZDk0NyIsImlhdCI6MTcwNjEwNjE1NiwiZXhwIjoxNzA4Njk4MTU2fQ.Er1HWc4I60Kxs4HrfBx0ADIzYaBhwMWI9ZdJNfdR-DM";
       // Make a POST request to the API endpoint
-      const response = await axios.post("/api/products", formData);
+      const response = await axios.post(
+        "http://localhost:5000/api/products/addProduct",
+        formData,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
   
       // Handle the response from the server if needed
       console.log("Product added successfully:", response.data);
