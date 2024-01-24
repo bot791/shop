@@ -10,7 +10,7 @@ const Homescreen = () => {
 
   useEffect(() => {
     const fetchProducts = async () => {
-      const { data } = await axios.get("https://shop-api-6ak8.onrender.com/api/products");
+      const { data } = await axios.get("/api/products");
       setProducts(data);
     };
     fetchProducts();

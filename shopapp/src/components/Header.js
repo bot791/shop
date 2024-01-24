@@ -48,7 +48,7 @@ const Header = () => {
   
     try {
       // Make a POST request to the API endpoint
-      const response = await axios.post("https://shop-api-6ak8.onrender.com/api/products", formData);
+      const response = await axios.post("/api/products", formData);
   
       // Handle the response from the server if needed
       console.log("Product added successfully:", response.data);
