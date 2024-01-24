@@ -93,18 +93,18 @@ const Header = () => {
         Add product
         <img className="h-5 pl-1" src="./images/login.svg" alt="login" />
       </button>
-        <button className="flex flex-row hover:-translate-y-0.5 transform transition focus:outline-none bg-neutral-400 hover:bg-neutral-300 text-white hover:text-purple-900 px-2 py-2 shadow-lg uppercase tracking-wider font-semibold text-sm">
+        <button className="flex flex-row hover:-translate-y-0.5 transform transition focus:outline-none bg-transparent hover:bg-blue-400 text-gray-600 hover:text-yellow-100 px-2 py-2 hover:shadow-lg uppercase tracking-wider font-semibold text-sm">
           Login
-          <img className="h-5 pl-1" src="./images/login.svg" alt="login" />
+          <img className="h-5 pl-1" src="./images/signin.svg" alt="login" />
         </button>
-        <button className="flex flex-row hover:-translate-y-0.5 transform transition focus:outline-none bg-neutral-400 hover:bg-neutral-300  text-white hover:text-purple-900 px-2 py-2 shadow-lg uppercase tracking-wider font-semibold text-sm">
+        <button className="flex flex-row hover:-translate-y-0.5 transform transition focus:outline-none bg-transparent hover:bg-blue-400  text-gray-600 hover:text-yellow-100 px-2 py-2 hover:shadow-lg uppercase tracking-wider font-semibold text-sm">
           Cart
           <img className="h-5 pl-1" src="./images/cart.svg" alt="cart" />
         </button>
       </div>
       <div className=" visible sm:invisible flex flex-row absolute right-1 top-2 space-x-2 px-2 ">
         <button className=" hover:-translate-y-0.5 transform transition focus:outline-none  px-1 py-2">
-          <img className=" h-8" src="./images/login.svg" alt="login" />
+          <img className=" h-8" src="./images/signin.svg" alt="login" />
         </button>
         <button className=" hover:-translate-y-0.5 transform transition focus:outline-none px-1 py-2">
           <img className=" h-8" src="./images/cart.svg" alt="cart" />
