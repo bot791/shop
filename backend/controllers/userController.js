@@ -2,6 +2,7 @@ import asyncHandler from "express-async-handler";
 import User from "../models/userModel.js";
 import generateToken from "../utils/generateToken.js";
 
+//authUser
 const authUser = asyncHandler(async (req, res) => {
   const { email, password } = req.body;
   const user = await User.findOne({ email });
