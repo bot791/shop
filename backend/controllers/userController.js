@@ -21,6 +21,7 @@ const authUser = asyncHandler(async (req, res) => {
 });
 //resister user
 
+
 const resisterUser = asyncHandler(async (req, res) => {
   const { name, email, password } = req.body;
   const userExists = await User.findOne({ email });
@@ -64,3 +65,10 @@ const getUserProfile = asyncHandler(async (req, res) => {
 });
 
 export { authUser, getUserProfile, resisterUser };
+
+const getUserProfile = asyncHandler(async (req, res) => {
+  res.send("Success");
+});
+
+export { authUser, getUserProfile };
+
