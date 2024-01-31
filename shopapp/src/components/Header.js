@@ -16,7 +16,6 @@ const Header = () => {
     location: "",
   });
 
-
   const navigate = useNavigate();
 
   const handleRedirect = () => {
@@ -33,10 +32,10 @@ const Header = () => {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-  
+
     // Convert the "price" value to a number if the field is "price"
     const updatedValue = name === "price" ? parseFloat(value) : value;
-  
+
     setFormData((prevData) => ({
       ...prevData,
       [name]: updatedValue,
@@ -45,9 +44,10 @@ const Header = () => {
 
   const handleAddProductSubmit = async (e) => {
     e.preventDefault();
-  
+
     try {
-      const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YWE4MTNkM2NkZGY1NmNkMDFiZDk0NyIsImlhdCI6MTcwNjEwNjE1NiwiZXhwIjoxNzA4Njk4MTU2fQ.Er1HWc4I60Kxs4HrfBx0ADIzYaBhwMWI9ZdJNfdR-DM";
+      const token =
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YWE4MTNkM2NkZGY1NmNkMDFiZDk0NyIsImlhdCI6MTcwNjEwNjE1NiwiZXhwIjoxNzA4Njk4MTU2fQ.Er1HWc4I60Kxs4HrfBx0ADIzYaBhwMWI9ZdJNfdR-DM";
       // Make a POST request to the API endpoint
       const response = await axios.post(
         "http://localhost:5000/api/products/addProduct",
@@ -58,21 +58,21 @@ const Header = () => {
           },
         }
       );
-  
+
       // Handle the response from the server if needed
       console.log("Product added successfully:", response.data);
-  
+
       // Show a success notification
       toast.success("Product added successfully", {
         position: "top-right",
       });
-  
+
       // Close the modal
       setIsModalOpen(false);
     } catch (error) {
       // Handle errors, log or show an error message to the user
       console.error("Error adding product:", error);
-  
+
       // Show an error notification
       toast.error("Error adding product. Please try again.", {
         position: "top-right",
@@ -95,16 +95,16 @@ const Header = () => {
         />
       </h1>
       <div className="invisible sm:visible ml-auto sm:space-x-4 py-4 absolute right-5 flex flex-row">
-      <button
-        className="flex flex-row hover:-translate-y-0.5 transform transition focus:outline-none bg-neutral-400 hover:bg-neutral-300 text-white hover:text-purple-900 px-2 py-2 shadow-lg uppercase tracking-wider font-semibold text-sm"
-        onClick={handleAddProductClick}
-      >
-        Add product
-        <img className="h-5 pl-1" src="./images/login.svg" alt="login" />
-      </button>
+        <button
+          className="flex flex-row hover:-translate-y-0.5 transform transition focus:outline-none bg-transparent hover:bg-blue-400 text-gray-600 hover:text-yellow-100 px-2 py-2 uppercase tracking-wider font-semibold text-sm"
+          onClick={handleAddProductClick}
+        >
+          Add product
+          <img className="h-5 pl-1" src="./images/addtocart.svg" alt="login" />
+        </button>
         <button className="flex flex-row hover:-translate-y-0.5 transform transition focus:outline-none bg-transparent hover:bg-blue-400 text-gray-600 hover:text-yellow-100 px-2 py-2 hover:shadow-lg uppercase tracking-wider font-semibold text-sm">
           Login
-          <img className="h-5 pl-1" src="./images/signin.svg" alt="login" />
+          <img className="h-5 pl-1" src="./images/loginlogo.svg" alt="login" />
         </button>
         <button className="flex flex-row hover:-translate-y-0.5 transform transition focus:outline-none bg-transparent hover:bg-blue-400  text-gray-600 hover:text-yellow-100 px-2 py-2 hover:shadow-lg uppercase tracking-wider font-semibold text-sm">
           Cart
@@ -142,18 +142,18 @@ const Header = () => {
             }}
           >
             <form onSubmit={handleAddProductSubmit}>
-              <label style={{color:"blue"}}>
+              <label style={{ color: "blue" }}>
                 Name:
                 <input
                   type="text"
                   name="name"
                   value={formData.name}
                   onChange={handleInputChange}
-                  style={{ marginLeft: "10px", }}
+                  style={{ marginLeft: "10px" }}
                 />
               </label>
               <br />
-              <label style={{color:"blue"}}>
+              <label style={{ color: "blue" }}>
                 Brand:
                 <input
                   type="text"
@@ -164,7 +164,7 @@ const Header = () => {
                 />
               </label>
               <br />
-              <label style={{color:"blue"}}>
+              <label style={{ color: "blue" }}>
                 Category:
                 <input
                   type="text"
@@ -175,7 +175,7 @@ const Header = () => {
                 />
               </label>
               <br />
-              <label style={{color:"blue"}}>
+              <label style={{ color: "blue" }}>
                 Description:
                 <input
                   type="text"
@@ -186,7 +186,7 @@ const Header = () => {
                 />
               </label>
               <br />
-              <label style={{color:"blue"}}>
+              <label style={{ color: "blue" }}>
                 Price:
                 <input
                   type="number"
@@ -197,7 +197,7 @@ const Header = () => {
                 />
               </label>
               <br />
-              <label style={{color:"blue"}}>
+              <label style={{ color: "blue" }}>
                 Location:
                 <input
                   type="text"
