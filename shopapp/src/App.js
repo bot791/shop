@@ -6,17 +6,29 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Productscreen from "./screens/Productscreen";
 import Cartscreen from "./screens/Cartscreen";
+import Loginscreen from "./screens/Loginscreen";
 
 function App() {
   return (
     <div className=" relative">
       <Router>
-      <ToastContainer position="top-right" autoClose={2000} hideProgressBar={false} newestOnTop closeOnClick rtl pauseOnFocusLoss draggable pauseOnHover />
+        <ToastContainer
+          position="top-right"
+          autoClose={2000}
+          hideProgressBar={false}
+          newestOnTop
+          closeOnClick
+          rtl
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
         <Header />
         <Routes>
-          <Route exact path="/" element={<Homescreen />}></Route>
+          <Route path="/login" element={<Loginscreen />}></Route>
           <Route path="/product/:id" element={<Productscreen />}></Route>
           <Route path="/cart/:id?" element={<Cartscreen />}></Route>
+          <Route exact path="/" element={<Homescreen />}></Route>
         </Routes>
         <Footer />
       </Router>
