@@ -4,13 +4,13 @@ const router = express.Router();
 import {
   authUser,
   getUserProfile,
-  resisterUser,
+  registerUser,
 } from "../controllers/userController.js";
 
 import { protect } from "../middleware/authMiddleware.js";
 
 //reesisterUser
-router.route("/").post(resisterUser);
+router.route("/").post(registerUser);
 // Public route
 router.post("/login", authUser);
 //protected route userProfile

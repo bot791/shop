@@ -92,7 +92,7 @@ const Header = () => {
       >
         Meds.etc
         <img
-          className=" h-5 mt-2 sm:mt-3  ml-2"
+          className="h-5 mt-2 sm:mt-3  ml-2"
           src="./images/shop.svg"
           alt="shop"
         />

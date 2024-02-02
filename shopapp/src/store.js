@@ -1,11 +1,12 @@
 import { legacy_createStore, combineReducers, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 import { productListReducer } from "./reducers/productReducers";
-import { userLoginReducer } from "./reducers/userReducers";
+import { userLoginReducer, userRegisterReducer } from "./reducers/userReducers";
 
 const reducer = combineReducers({
   productList: productListReducer,
   userLogin: userLoginReducer,
+  userRegister: userRegisterReducer,
 });
 
 const userInfoFromStorage = localStorage.getItem("userInfo")

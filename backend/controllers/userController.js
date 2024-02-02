@@ -19,9 +19,9 @@ const authUser = asyncHandler(async (req, res) => {
     throw new Error("Invalid email or password");
   }
 });
-//resister user
+//register user
 
-const resisterUser = asyncHandler(async (req, res) => {
+const registerUser = asyncHandler(async (req, res) => {
   const { name, email, password } = req.body;
   const userExists = await User.findOne({ email });
   if (userExists) {
@@ -63,4 +63,4 @@ const getUserProfile = asyncHandler(async (req, res) => {
   }
 });
 
-export { authUser, getUserProfile, resisterUser };
+export { authUser, getUserProfile, registerUser };
