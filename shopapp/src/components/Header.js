@@ -21,6 +21,9 @@ const Header = () => {
   const handleRedirect = () => {
     navigate("/");
   };
+  const handleRedirectforlogin = () => {
+    navigate("/login");
+  };
 
   const handleAddProductClick = () => {
     setIsModalOpen(true);
@@ -102,7 +105,10 @@ const Header = () => {
           Add product
           <img className="h-5 pl-1" src="./images/addtocart.svg" alt="login" />
         </button>
-        <button className="flex flex-row hover:-translate-y-0.5 transform transition focus:outline-none bg-transparent hover:bg-blue-400 text-gray-600 hover:text-yellow-100 px-2 py-2 hover:shadow-lg uppercase tracking-wider font-semibold text-sm">
+        <button
+          onClick={handleRedirectforlogin}
+          className="flex flex-row hover:-translate-y-0.5 transform transition focus:outline-none bg-transparent hover:bg-blue-400 text-gray-600 hover:text-yellow-100 px-2 py-2 hover:shadow-lg uppercase tracking-wider font-semibold text-sm"
+        >
           Login
           <img className="h-5 pl-1" src="./images/loginlogo.svg" alt="login" />
         </button>
